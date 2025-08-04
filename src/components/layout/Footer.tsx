@@ -35,20 +35,17 @@ const Footer = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {/* Company Info */}
             <div className="space-y-4">
-              <div className="flex items-center space-x-3">
-                <div className="relative h-8 w-8 flex-shrink-0">
+              <div className="flex items-center">
+                <div className="relative h-16 w-16 flex-shrink-0">
                   <Image
                     src="/mahallilogo.png"
                     alt="Mahalli.tn Logo"
                     fill
-                    className="object-contain brightness-0 invert"
+                    className="object-contain"
                   />
                 </div>
-                <span className="text-xl font-bold">
-                  Mahalli<span className="mahalli-primary">.tn</span>
-                </span>
               </div>
-              <p className="text-muted-foreground text-sm leading-relaxed">
+              <p className="text-secondary-foreground/80 text-sm leading-relaxed">
                 Votre nouvelle référence pour la location saisonnière et la vente immobilière en Tunisie. 
                 Là où commence votre prochain chapitre.
               </p>
@@ -57,22 +54,22 @@ const Footer = () => {
               <div className="space-y-3">
                 <div className="flex items-center space-x-3">
                   <MapPin className="h-4 w-4 mahalli-primary flex-shrink-0" />
-                  <span className="text-sm text-muted-foreground">Ben Arous, Tunisie</span>
+                  <span className="text-sm text-secondary-foreground/70">Ben Arous, Tunisie</span>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Phone className="h-4 w-4 mahalli-primary flex-shrink-0" />
                   <div className="flex flex-col space-y-1">
-                    <a href="tel:+21642614477" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    <a href="tel:+21642614477" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
                       42 614 477
                     </a>
-                    <a href="tel:+21693128882" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                    <a href="tel:+21693128882" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
                       93 128 882
                     </a>
                   </div>
                 </div>
                 <div className="flex items-center space-x-3">
                   <Mail className="h-4 w-4 mahalli-primary flex-shrink-0" />
-                  <a href="mailto:contact@mahalli.tn" className="text-sm text-muted-foreground hover:text-primary transition-colors">
+                  <a href="mailto:contact@mahalli.tn" className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors">
                     contact@mahalli.tn
                   </a>
                 </div>
@@ -87,7 +84,7 @@ const Footer = () => {
                   <li key={link.title}>
                     <Link 
                       href={link.href} 
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                      className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors"
                     >
                       {link.title}
                     </Link>
@@ -104,7 +101,7 @@ const Footer = () => {
                   <li key={location.title}>
                     <Link 
                       href={location.href} 
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                      className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors"
                     >
                       {location.title}
                     </Link>
@@ -121,7 +118,7 @@ const Footer = () => {
                   <li key={service.title}>
                     <Link 
                       href={service.href} 
-                      className="text-sm text-muted-foreground hover:text-primary transition-colors"
+                      className="text-sm text-secondary-foreground/70 hover:text-primary transition-colors"
                     >
                       {service.title}
                     </Link>
@@ -131,15 +128,15 @@ const Footer = () => {
               
               {/* Trust Indicators */}
               <div className="mt-6 space-y-2">
-                <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <div className="flex items-center space-x-2 text-sm text-secondary-foreground/70">
                   <div className="w-2 h-2 mahalli-bg-success rounded-full"></div>
                   <span>Locations vérifiées</span>
                 </div>
-                <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <div className="flex items-center space-x-2 text-sm text-secondary-foreground/70">
                   <div className="w-2 h-2 mahalli-bg-primary rounded-full"></div>
                   <span>Tarifs justes</span>
                 </div>
-                <div className="flex items-center space-x-2 text-sm text-muted-foreground">
+                <div className="flex items-center space-x-2 text-sm text-secondary-foreground/70">
                   <div className="w-2 h-2 mahalli-bg-accent rounded-full"></div>
                   <span>Assistance 7j/7</span>
                 </div>
@@ -152,10 +149,10 @@ const Footer = () => {
         <div className="border-t border-border py-6">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
-              <p className="text-sm text-muted-foreground">
-                © 2024 Mahalli.tn. Tous droits réservés.
+              <p className="text-sm text-secondary-foreground/70">
+                © 2024 Mahalli. Tous droits réservés.
               </p>
-              <div className="flex space-x-4 text-sm text-muted-foreground">
+              <div className="flex space-x-4 text-sm text-secondary-foreground/70">
                 <Link href="/mentions-legales" className="hover:text-primary transition-colors">
                   Mentions légales
                 </Link>
@@ -167,7 +164,7 @@ const Footer = () => {
                 </Link>
               </div>
             </div>
-            <div className="flex items-center space-x-1 text-sm text-muted-foreground">
+            <div className="flex items-center space-x-1 text-sm text-secondary-foreground/70">
               <span>Développé avec</span>
               <Heart className="h-4 w-4 text-red-400" />
               <span>en Tunisie</span>

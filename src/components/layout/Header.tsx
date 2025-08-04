@@ -38,10 +38,10 @@ const Header = () => {
   return (
     <header className="sticky top-0 z-50 w-full border-b border-border bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/80 shadow-sm">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="flex h-16 items-center justify-between">
+        <div className="flex h-24 items-center justify-between">
           {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
-            <div className="relative h-10 w-10 flex-shrink-0">
+          <Link href="/" className="flex items-center">
+            <div className="relative h-20 w-20 flex-shrink-0">
               <Image
                 src="/mahallilogo.png"
                 alt="Mahalli.tn Logo"
@@ -50,9 +50,6 @@ const Header = () => {
                 priority
               />
             </div>
-            <span className="hidden text-xl font-bold text-foreground sm:inline-block">
-              Mahalli<span className="mahalli-primary">.tn</span>
-            </span>
           </Link>
 
           {/* Navigation Desktop */}

@@ -99,18 +99,18 @@ export default function AboutPage() {
     <div className="min-h-screen pt-8">
       {/* Hero Section */}
       <section className="relative py-16 lg:py-24 overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-blue-600 via-purple-600 to-green-600"></div>
+        <div className="absolute inset-0 mahalli-bg-primary"></div>
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div className="text-white">
+            <div className="text-primary-foreground">
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold mb-6">
                 À Propos de{' '}
-                <span className="text-yellow-300">Mahalli</span>
+                <span className="text-accent">Mahalli</span>
               </h1>
-              <p className="text-xl lg:text-2xl text-blue-100 mb-6 leading-relaxed">
+              <p className="text-xl lg:text-2xl text-primary-foreground/90 mb-6 leading-relaxed">
                 Votre partenaire de confiance pour l'immobilier en Tunisie
               </p>
-              <p className="text-lg text-blue-100 leading-relaxed">
+              <p className="text-lg text-primary-foreground/80 leading-relaxed">
                 Chez Mahalli, nous croyons que chaque Tunisien mérite d'avoir accès aux meilleures 
                 opportunités immobilières. Notre mission est de vous accompagner dans la réalisation 
                 de vos rêves, qu'il s'agisse de trouver la location parfaite pour vos vacances ou 
@@ -136,14 +136,14 @@ export default function AboutPage() {
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
-            <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100">
+            <div className="bg-card rounded-3xl p-8 lg:p-12 shadow-xl border border-border">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-blue-100 text-blue-600 rounded-xl flex items-center justify-center mr-4">
+                <div className="w-12 h-12 bg-primary/10 text-primary rounded-xl flex items-center justify-center mr-4">
                   <Target className="h-6 w-6" />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-900">Notre Mission</h2>
+                <h2 className="text-3xl font-bold text-card-foreground">Notre Mission</h2>
               </div>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Rendre l'immobilier accessible à tous les Tunisiens en proposant des services 
                 transparents, fiables et adaptés aux besoins locaux. Nous voulons être le pont 
                 entre les propriétaires et les chercheurs de biens, en créant de la valeur pour 
@@ -151,14 +151,14 @@ export default function AboutPage() {
               </p>
             </div>
 
-            <div className="bg-white rounded-3xl p-8 lg:p-12 shadow-xl border border-gray-100">
+            <div className="bg-card rounded-3xl p-8 lg:p-12 shadow-xl border border-border">
               <div className="flex items-center mb-6">
-                <div className="w-12 h-12 bg-green-100 text-green-600 rounded-xl flex items-center justify-center mr-4">
+                <div className="w-12 h-12 mahalli-bg-success/10 mahalli-success rounded-xl flex items-center justify-center mr-4">
                   <Eye className="h-6 w-6" />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-900">Notre Vision</h2>
+                <h2 className="text-3xl font-bold text-card-foreground">Notre Vision</h2>
               </div>
-              <p className="text-lg text-gray-600 leading-relaxed">
+              <p className="text-lg text-muted-foreground leading-relaxed">
                 Devenir la référence incontournable de l'immobilier en Tunisie, reconnue pour 
                 son expertise, son intégrité et son innovation. Nous aspirons à transformer 
                 l'expérience immobilière en la rendant simple, transparente et humaine.
@@ -169,7 +169,7 @@ export default function AboutPage() {
       </section>
 
       {/* Values */}
-      <section className="py-16 lg:py-24 bg-gray-50">
+      <section className="py-16 lg:py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -184,14 +184,14 @@ export default function AboutPage() {
             {values.map((value, index) => {
               const IconComponent = value.icon
               return (
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center group">
-                  <div className="w-16 h-16 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-blue-600 group-hover:text-white transition-all duration-300">
+                <div key={index} className="bg-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center group">
+                  <div className="w-16 h-16 bg-primary/10 text-primary rounded-full flex items-center justify-center mx-auto mb-6 group-hover:bg-primary group-hover:text-primary-foreground transition-all duration-300">
                     <IconComponent className="h-8 w-8" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-xl font-bold text-card-foreground mb-4">
                     {value.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed">
                     {value.description}
                   </p>
                 </div>
@@ -202,13 +202,13 @@ export default function AboutPage() {
       </section>
 
       {/* Statistics */}
-      <section className="py-16 lg:py-24 bg-blue-600">
+      <section className="py-16 lg:py-24 mahalli-bg-secondary">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-secondary-foreground mb-4">
               Mahalli en Chiffres
             </h2>
-            <p className="text-xl text-blue-100 max-w-2xl mx-auto">
+            <p className="text-xl text-secondary-foreground/80 max-w-2xl mx-auto">
               Des résultats qui témoignent de notre engagement et de votre confiance
             </p>
           </div>
@@ -218,13 +218,13 @@ export default function AboutPage() {
               const IconComponent = stat.icon
               return (
                 <div key={index} className="text-center">
-                  <div className="w-16 h-16 bg-white/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4">
-                    <IconComponent className="h-8 w-8 text-white" />
+                  <div className="w-16 h-16 bg-primary/20 backdrop-blur-sm rounded-full flex items-center justify-center mx-auto mb-4">
+                    <IconComponent className="h-8 w-8 text-primary" />
                   </div>
-                  <div className="text-4xl lg:text-5xl font-bold text-white mb-2">
+                  <div className="text-4xl lg:text-5xl font-bold text-secondary-foreground mb-2">
                     {stat.number}
                   </div>
-                  <div className="text-blue-100 text-lg">
+                  <div className="text-secondary-foreground/70 text-lg">
                     {stat.label}
                   </div>
                 </div>
@@ -248,7 +248,7 @@ export default function AboutPage() {
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
             {team.map((member, index) => (
-              <div key={index} className="bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
+              <div key={index} className="bg-card rounded-2xl overflow-hidden shadow-lg hover:shadow-xl transition-all duration-300 group">
                 <div className="aspect-w-1 aspect-h-1 h-64 overflow-hidden">
                   <Image
                     src={member.image}
@@ -259,13 +259,13 @@ export default function AboutPage() {
                   />
                 </div>
                 <div className="p-6">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                  <h3 className="text-xl font-bold text-card-foreground mb-2">
                     {member.name}
                   </h3>
-                  <p className="text-blue-600 font-medium mb-3">
+                  <p className="text-primary font-medium mb-3">
                     {member.role}
                   </p>
-                  <p className="text-gray-600 text-sm leading-relaxed">
+                  <p className="text-muted-foreground text-sm leading-relaxed">
                     {member.description}
                   </p>
                 </div>
@@ -276,7 +276,7 @@ export default function AboutPage() {
       </section>
 
       {/* Timeline */}
-      <section className="py-16 lg:py-24 bg-gray-50">
+      <section className="py-16 lg:py-24 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -291,15 +291,15 @@ export default function AboutPage() {
             {milestones.map((milestone, index) => (
               <div key={index} className="flex items-start space-x-6">
                 <div className="flex-shrink-0">
-                  <div className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center font-bold">
+                  <div className="w-12 h-12 bg-primary text-primary-foreground rounded-full flex items-center justify-center font-bold">
                     {milestone.year}
                   </div>
                 </div>
-                <div className="bg-white rounded-xl p-6 shadow-md flex-1">
-                  <h3 className="text-xl font-bold text-gray-900 mb-2">
+                <div className="bg-card rounded-xl p-6 shadow-md flex-1">
+                  <h3 className="text-xl font-bold text-card-foreground mb-2">
                     {milestone.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed">
                     {milestone.description}
                   </p>
                 </div>
@@ -310,19 +310,19 @@ export default function AboutPage() {
       </section>
 
       {/* CTA */}
-      <section className="py-16 lg:py-24 bg-gradient-to-r from-green-600 to-blue-600">
+      <section className="py-16 lg:py-24 mahalli-bg-primary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 lg:mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-primary-foreground mb-4 lg:mb-6">
             Rejoignez la famille Mahalli
           </h2>
-          <p className="text-xl text-green-100 mb-8 lg:mb-10 leading-relaxed">
+          <p className="text-xl text-primary-foreground/90 mb-8 lg:mb-10 leading-relaxed">
             Découvrez pourquoi des milliers de Tunisiens nous font confiance pour leurs projets immobiliers.
             Votre prochain chapitre commence ici.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button 
               asChild
-              className="bg-white text-blue-600 hover:bg-gray-50 px-8 py-4 rounded-xl font-semibold shadow-lg"
+              className="bg-card text-card-foreground hover:bg-card/90 px-8 py-4 rounded-xl font-semibold shadow-lg"
             >
               <a href="/contact">
                 Contactez-nous
@@ -331,14 +331,14 @@ export default function AboutPage() {
             <Button 
               asChild
               variant="outline" 
-              className="bg-green-500 text-white border-green-400 hover:bg-green-400 px-8 py-4 rounded-xl font-semibold"
+              className="bg-accent text-accent-foreground border-accent hover:bg-accent/90 px-8 py-4 rounded-xl font-semibold"
             >
               <a href="/services">
                 Nos Services
               </a>
             </Button>
           </div>
-          <div className="mt-8 text-green-100 text-sm">
+          <div className="mt-8 text-primary-foreground/80 text-sm">
             <p>📍 Ben Arous, Tunisie | 📞 42 614 477 / 93 128 882</p>
             <p className="mt-2 italic">"Mahalli, là où commence votre prochain chapitre."</p>
           </div>

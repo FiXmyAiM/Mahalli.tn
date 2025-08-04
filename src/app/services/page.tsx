@@ -25,7 +25,7 @@ export default function ServicesPage() {
         'Rapport détaillé sous 48h',
         'Conseil sur la stratégie tarifaire'
       ],
-      color: 'bg-blue-100 text-blue-600'
+      color: 'bg-primary/10 text-primary'
     },
     {
       icon: Users,
@@ -37,7 +37,7 @@ export default function ServicesPage() {
         'Négociation des meilleures conditions',
         'Support jusqu\'à la signature'
       ],
-      color: 'bg-green-100 text-green-600'
+      color: 'mahalli-bg-success/10 mahalli-success'
     },
     {
       icon: Shield,
@@ -49,7 +49,7 @@ export default function ServicesPage() {
         'Authentification des photos',
         'Validation des équipements'
       ],
-      color: 'bg-purple-100 text-purple-600'
+      color: 'bg-accent/20 text-accent-foreground'
     },
     {
       icon: Search,
@@ -61,7 +61,7 @@ export default function ServicesPage() {
         'Sélection de biens exclusifs',
         'Présentation des meilleures options'
       ],
-      color: 'bg-orange-100 text-orange-600'
+      color: 'bg-secondary/10 text-secondary'
     }
   ]
 
@@ -122,15 +122,15 @@ export default function ServicesPage() {
   return (
     <div className="min-h-screen pt-8">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 py-16 lg:py-24">
+      <section className="mahalli-bg-primary py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 lg:mb-6">
+          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-primary-foreground mb-4 lg:mb-6">
             Nos Services
           </h1>
-          <p className="text-xl lg:text-2xl text-blue-100 mb-6 lg:mb-8 max-w-3xl mx-auto">
+          <p className="text-xl lg:text-2xl text-primary-foreground/90 mb-6 lg:mb-8 max-w-3xl mx-auto">
             Un accompagnement complet pour tous vos projets immobiliers en Tunisie
           </p>
-          <div className="flex flex-wrap justify-center gap-4 text-blue-100">
+          <div className="flex flex-wrap justify-center gap-4 text-primary-foreground/80">
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5" />
               <span>Expertise locale</span>
@@ -167,22 +167,22 @@ export default function ServicesPage() {
             {mainServices.map((service, index) => {
               const IconComponent = service.icon
               return (
-                <div key={index} className="bg-white rounded-3xl p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 border border-gray-100">
+                <div key={index} className="bg-card rounded-3xl p-8 lg:p-10 shadow-lg hover:shadow-2xl transition-all duration-300 border border-border">
                   <div className={`inline-flex items-center justify-center w-16 h-16 lg:w-20 lg:h-20 rounded-2xl ${service.color} mb-6`}>
                     <IconComponent className="h-8 w-8 lg:h-10 lg:w-10" />
                   </div>
                   
-                  <h3 className="text-2xl lg:text-3xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-2xl lg:text-3xl font-bold text-card-foreground mb-4">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 text-base lg:text-lg leading-relaxed mb-6">
+                  <p className="text-muted-foreground text-base lg:text-lg leading-relaxed mb-6">
                     {service.description}
                   </p>
                   
                   <ul className="space-y-3">
                     {service.features.map((feature, featureIndex) => (
-                      <li key={featureIndex} className="flex items-center text-gray-700">
-                        <CheckCircle className="h-5 w-5 text-green-500 mr-3 flex-shrink-0" />
+                      <li key={featureIndex} className="flex items-center text-card-foreground">
+                        <CheckCircle className="h-5 w-5 mahalli-success mr-3 flex-shrink-0" />
                         <span>{feature}</span>
                       </li>
                     ))}
@@ -195,7 +195,7 @@ export default function ServicesPage() {
       </section>
 
       {/* Additional Services */}
-      <section className="py-16 lg:py-24 bg-gray-50">
+      <section className="py-16 lg:py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
             <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
@@ -210,20 +210,20 @@ export default function ServicesPage() {
             {additionalServices.map((service, index) => {
               const IconComponent = service.icon
               return (
-                <div key={index} className="bg-white rounded-2xl p-6 lg:p-8 shadow-md hover:shadow-xl transition-all duration-300">
-                  <div className="flex items-center justify-center w-12 h-12 bg-blue-100 text-blue-600 rounded-xl mb-4">
+                <div key={index} className="bg-card rounded-2xl p-6 lg:p-8 shadow-md hover:shadow-xl transition-all duration-300">
+                  <div className="flex items-center justify-center w-12 h-12 bg-primary/10 text-primary rounded-xl mb-4">
                     <IconComponent className="h-6 w-6" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl font-bold text-card-foreground mb-3">
                     {service.title}
                   </h3>
-                  <p className="text-gray-600 text-sm mb-4">
+                  <p className="text-muted-foreground text-sm mb-4">
                     {service.description}
                   </p>
                   <ul className="space-y-2">
                     {service.includes.map((item, itemIndex) => (
-                      <li key={itemIndex} className="flex items-center text-xs text-gray-500">
-                        <div className="w-1.5 h-1.5 bg-blue-600 rounded-full mr-2"></div>
+                      <li key={itemIndex} className="flex items-center text-xs text-muted-foreground">
+                        <div className="w-1.5 h-1.5 bg-primary rounded-full mr-2"></div>
                         <span>{item}</span>
                       </li>
                     ))}
@@ -253,17 +253,17 @@ export default function ServicesPage() {
               return (
                 <div key={index} className="text-center group">
                   <div className="relative mb-6">
-                    <div className="w-20 h-20 mx-auto bg-blue-600 text-white rounded-full flex items-center justify-center text-2xl font-bold group-hover:bg-blue-700 transition-colors duration-300">
+                    <div className="w-20 h-20 mx-auto bg-primary text-primary-foreground rounded-full flex items-center justify-center text-2xl font-bold group-hover:bg-primary/80 transition-colors duration-300">
                       {step.step}
                     </div>
-                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-blue-100 text-blue-600 rounded-full flex items-center justify-center">
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-8 h-8 bg-primary/10 text-primary rounded-full flex items-center justify-center">
                       <IconComponent className="h-4 w-4" />
                     </div>
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-3">
+                  <h3 className="text-xl font-bold text-foreground mb-3">
                     {step.title}
                   </h3>
-                  <p className="text-gray-600 leading-relaxed">
+                  <p className="text-muted-foreground leading-relaxed">
                     {step.description}
                   </p>
                 </div>
@@ -274,19 +274,19 @@ export default function ServicesPage() {
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 lg:py-24 bg-blue-600">
+      <section className="py-16 lg:py-24 mahalli-bg-secondary">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4 lg:mb-6">
+          <h2 className="text-3xl lg:text-4xl font-bold text-secondary-foreground mb-4 lg:mb-6">
             Prêt à commencer votre projet ?
           </h2>
-          <p className="text-xl text-blue-100 mb-8 lg:mb-10 leading-relaxed">
+          <p className="text-xl text-secondary-foreground/80 mb-8 lg:mb-10 leading-relaxed">
             Contactez-nous dès aujourd'hui pour bénéficier de nos services d'experts 
             et concrétiser vos projets immobiliers en Tunisie.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a 
               href="tel:+21642614477"
-              className="inline-flex items-center justify-center px-8 py-4 bg-white text-blue-600 font-semibold rounded-xl hover:bg-gray-50 transition-colors duration-200 shadow-lg"
+              className="inline-flex items-center justify-center px-8 py-4 bg-card text-card-foreground font-semibold rounded-xl hover:bg-card/90 transition-colors duration-200 shadow-lg"
             >
               <Phone className="h-5 w-5 mr-2" />
               Appelez maintenant
@@ -294,7 +294,7 @@ export default function ServicesPage() {
             <Button 
               asChild
               variant="outline" 
-              className="bg-blue-500 text-white border-blue-400 hover:bg-blue-400 px-8 py-4 rounded-xl font-semibold"
+              className="bg-primary text-primary-foreground border-primary hover:bg-primary/90 px-8 py-4 rounded-xl font-semibold"
             >
               <a href="/contact">
                 <FileText className="h-5 w-5 mr-2" />
@@ -302,7 +302,7 @@ export default function ServicesPage() {
               </a>
             </Button>
           </div>
-          <div className="mt-8 text-blue-100 text-sm">
+          <div className="mt-8 text-secondary-foreground/70 text-sm">
             <p>📍 Ben Arous, Tunisie | 📞 42 614 477 / 93 128 882</p>
           </div>
         </div>

@@ -68,9 +68,17 @@ const Hero = () => {
       {/* Content */}
       <div className="relative z-10 w-full max-w-7xl mx-auto container-padding section-padding">
         <div className="text-center mb-16 space-y-comfortable">
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white tracking-tight">
-            Bienvenue chez{' '}
-            <span className="text-gradient bg-gradient-to-r from-primary via-accent to-primary bg-clip-text text-transparent">Mahalli</span>
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-7xl font-bold text-white tracking-tight flex items-center justify-center gap-4 flex-wrap">
+            <span>Bienvenue chez</span>
+            <div className="relative h-16 w-16 sm:h-20 sm:w-20 lg:h-24 lg:w-24 xl:h-28 xl:w-28 inline-block">
+              <Image
+                src="/mahallilogo.png"
+                alt="Mahalli Logo"
+                fill
+                className="object-contain"
+                priority
+              />
+            </div>
           </h1>
           <p className="text-xl sm:text-2xl lg:text-3xl text-gray-100 max-w-4xl mx-auto leading-relaxed text-balance font-light">
             Votre nouvelle référence pour la location saisonnière et la vente immobilière en Tunisie
@@ -83,17 +91,17 @@ const Hero = () => {
         {/* Search Form */}
         <div className="bg-white/95 backdrop-blur-sm rounded-3xl card-shadow p-6 sm:p-8 lg:p-10 max-w-5xl mx-auto border border-white/20">
           <Tabs value={searchType} onValueChange={setSearchType} className="w-full">
-            <TabsList className="grid w-full grid-cols-2 mb-8 lg:mb-10 h-14 bg-muted/50 rounded-2xl p-1">
+            <TabsList className="grid w-full grid-cols-2 mb-8 lg:mb-10 h-14 bg-muted rounded-2xl p-1">
               <TabsTrigger 
                 value="location" 
-                className="text-sm sm:text-base font-medium py-3 rounded-xl data-[state=active]:mahalli-bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md transition-all duration-200"
+                className="text-sm sm:text-base font-medium py-3 rounded-xl text-muted-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md transition-all duration-200"
               >
                 <Home className="h-4 w-4 mr-2" />
                 Location Saisonnière
               </TabsTrigger>
               <TabsTrigger 
                 value="vente" 
-                className="text-sm sm:text-base font-medium py-3 rounded-xl data-[state=active]:mahalli-bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md transition-all duration-200"
+                className="text-sm sm:text-base font-medium py-3 rounded-xl text-muted-foreground data-[state=active]:bg-primary data-[state=active]:text-primary-foreground data-[state=active]:shadow-md transition-all duration-200"
               >
                 <Euro className="h-4 w-4 mr-2" />
                 Vente Immobilière
@@ -224,14 +232,14 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 lg:mt-8">
               <Button 
                 onClick={handleSearch}
-                className="flex-1 sm:flex-none mahalli-bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 h-12 rounded-lg font-medium text-base transition-colors duration-200 shadow-lg hover:shadow-xl"
+                className="flex-1 sm:flex-none bg-primary text-primary-foreground hover:bg-primary/90 px-8 py-3 h-12 rounded-lg font-medium text-base transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               >
                 <Search className="h-5 w-5 mr-2" />
                 Rechercher
               </Button>
               <Button 
                 variant="outline"
-                className="flex-1 sm:flex-none border-border hover:bg-muted/50 px-8 py-3 h-12 rounded-lg font-medium text-base transition-colors duration-200"
+                className="flex-1 sm:flex-none bg-white/90 border-2 border-white/50 text-foreground hover:bg-white hover:border-white px-8 py-3 h-12 rounded-lg font-medium text-base transition-all duration-200 shadow-lg hover:shadow-xl hover:-translate-y-0.5"
               >
                 Recherche Avancée
               </Button>
