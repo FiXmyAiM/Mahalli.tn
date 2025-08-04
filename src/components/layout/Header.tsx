@@ -41,18 +41,15 @@ const Header = () => {
         <div className="flex h-16 items-center justify-between">
           {/* Logo */}
           <Link href="/" className="flex items-center space-x-3">
-            <div className="relative h-10 w-10 flex-shrink-0">
+            <div className="relative h-12 w-12 flex-shrink-0">
               <Image
                 src="/mahallilogo.png"
-                alt="Mahalli.tn Logo"
+                alt="Mahalli Logo"
                 fill
                 className="object-contain"
                 priority
               />
             </div>
-            <span className="hidden text-xl font-bold text-foreground sm:inline-block">
-              Mahalli<span className="mahalli-primary">.tn</span>
-            </span>
           </Link>
 
           {/* Navigation Desktop */}

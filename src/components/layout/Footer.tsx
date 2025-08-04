@@ -36,17 +36,14 @@ const Footer = () => {
             {/* Company Info */}
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
-                <div className="relative h-8 w-8 flex-shrink-0">
+                <div className="relative h-12 w-12 flex-shrink-0">
                   <Image
                     src="/mahallilogo.png"
-                    alt="Mahalli.tn Logo"
+                    alt="Mahalli Logo"
                     fill
                     className="object-contain brightness-0 invert"
                   />
                 </div>
-                <span className="text-xl font-bold">
-                  Mahalli<span className="mahalli-primary">.tn</span>
-                </span>
               </div>
               <p className="text-muted-foreground text-sm leading-relaxed">
                 Votre nouvelle référence pour la location saisonnière et la vente immobilière en Tunisie. 
@@ -153,7 +150,7 @@ const Footer = () => {
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6">
               <p className="text-sm text-muted-foreground">
-                © 2024 Mahalli.tn. Tous droits réservés.
+                © 2024 Mahalli. Tous droits réservés.
               </p>
               <div className="flex space-x-4 text-sm text-muted-foreground">
                 <Link href="/mentions-legales" className="hover:text-primary transition-colors">

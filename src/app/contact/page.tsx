@@ -8,8 +8,8 @@ import { Input } from '@/components/ui/input'
 
 // Note: Metadata export doesn't work in client components, so we'll handle SEO differently
 const pageMetadata = {
-  title: 'Contact - Mahalli.tn | Contactez nos Experts Immobiliers',
-  description: 'Contactez Mahalli.tn pour tous vos besoins immobiliers en Tunisie. Nos experts à Ben Arous vous accompagnent : 42 614 477 / 93 128 882. Devis gratuit sous 48h.',
+  title: 'Contact - Mahalli | Contactez nos Experts Immobiliers',
+  description: 'Contactez Mahalli pour tous vos besoins immobiliers en Tunisie. Nos experts à Ben Arous vous accompagnent : 42 614 477 / 93 128 882. Devis gratuit sous 48h.',
   keywords: 'contact mahalli tunisie, expert immobilier ben arous, devis immobilier gratuit, conseil immobilier tunisie, contact agence immobilière',
 }
 
@@ -64,7 +64,7 @@ export default function ContactPage() {
       details: ['42 614 477', '93 128 882'],
       action: 'Appelez-nous',
       link: 'tel:+21642614477',
-      color: 'bg-blue-100 text-blue-600'
+      color: 'bg-primary/10 text-primary'
     },
     {
       icon: Mail,
@@ -72,7 +72,7 @@ export default function ContactPage() {
       details: ['contact@mahalli.tn', 'info@mahalli.tn'],
       action: 'Écrivez-nous',
       link: 'mailto:contact@mahalli.tn',
-      color: 'bg-green-100 text-green-600'
+      color: 'bg-success/10 text-success'
     },
     {
       icon: MapPin,
@@ -80,7 +80,7 @@ export default function ContactPage() {
       details: ['Ben Arous', 'Tunisie 2013'],
       action: 'Nous rendre visite',
       link: '#',
-      color: 'bg-purple-100 text-purple-600'
+      color: 'bg-accent/10 text-accent-foreground'
     },
     {
       icon: Clock,
@@ -88,7 +88,7 @@ export default function ContactPage() {
       details: ['Lun-Ven: 8h-18h', 'Sam: 8h-14h'],
       action: 'Disponibilités',
       link: '#',
-      color: 'bg-orange-100 text-orange-600'
+      color: 'bg-secondary/10 text-secondary-foreground'
     }
   ]
 
@@ -114,15 +114,15 @@ export default function ContactPage() {
   return (
     <div className="min-h-screen pt-8">
       {/* Hero Section */}
-      <section className="bg-gradient-to-r from-blue-600 via-purple-600 to-pink-600 py-16 lg:py-24">
+      <section className="mahalli-bg-primary py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-white mb-4 lg:mb-6">
+          <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold text-primary-foreground mb-4 lg:mb-6">
             Contactez-Nous
           </h1>
-          <p className="text-xl lg:text-2xl text-blue-100 mb-6 lg:mb-8 max-w-3xl mx-auto">
+          <p className="text-xl lg:text-2xl text-primary-foreground/90 mb-6 lg:mb-8 max-w-3xl mx-auto">
             Notre équipe d'experts est à votre disposition pour répondre à tous vos besoins immobiliers
           </p>
-          <div className="flex flex-wrap justify-center gap-4 text-blue-100">
+          <div className="flex flex-wrap justify-center gap-4 text-primary-foreground/90">
             <div className="flex items-center space-x-2">
               <CheckCircle className="w-5 h-5" />
               <span>Réponse sous 2h</span>
@@ -143,10 +143,10 @@ export default function ContactPage() {
       <section className="py-16 lg:py-24">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12 lg:mb-16">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
               Plusieurs Moyens de Nous Contacter
             </h2>
-            <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
               Choisissez le moyen qui vous convient le mieux pour nous joindre
             </p>
           </div>
@@ -155,23 +155,23 @@ export default function ContactPage() {
             {contactInfo.map((info, index) => {
               const IconComponent = info.icon
               return (
-                <div key={index} className="bg-white rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 text-center group">
+                <div key={index} className="bg-card rounded-2xl p-8 card-shadow hover:shadow-xl transition-all duration-300 text-center group border border-border">
                   <div className={`inline-flex items-center justify-center w-16 h-16 rounded-2xl ${info.color} mb-6 group-hover:scale-110 transition-transform duration-300`}>
                     <IconComponent className="h-8 w-8" />
                   </div>
-                  <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  <h3 className="text-xl font-bold text-foreground mb-4">
                     {info.title}
                   </h3>
                   <div className="space-y-2 mb-6">
                     {info.details.map((detail, detailIndex) => (
-                      <p key={detailIndex} className="text-gray-600">
+                      <p key={detailIndex} className="text-muted-foreground">
                         {detail}
                       </p>
                     ))}
                   </div>
                   <a
                     href={info.link}
-                    className="inline-flex items-center text-blue-600 font-medium hover:text-blue-700 transition-colors"
+                    className="inline-flex items-center text-primary font-medium hover:text-primary/80 transition-colors"
                   >
                     {info.action}
                     <MessageCircle className="h-4 w-4 ml-2" />
@@ -184,23 +184,23 @@ export default function ContactPage() {
       </section>
 
       {/* Contact Form */}
-      <section className="py-16 lg:py-24 bg-gray-50">
+      <section className="py-16 lg:py-24 bg-muted/30">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
               Envoyez-nous un Message
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-muted-foreground">
               Remplissez le formulaire ci-dessous et nous vous répondrons rapidement
             </p>
           </div>
 
-          <div className="bg-white rounded-3xl shadow-xl p-8 lg:p-12">
+          <div className="bg-card rounded-3xl card-shadow p-8 lg:p-12 border border-border">
             {!isSubmitted ? (
               <form onSubmit={handleSubmit} className="space-y-6">
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
                       Nom complet *
                     </label>
                     <Input
@@ -215,7 +215,7 @@ export default function ContactPage() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
                       Email *
                     </label>
                     <Input
@@ -233,7 +233,7 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
                       Téléphone
                     </label>
                     <Input
@@ -247,7 +247,7 @@ export default function ContactPage() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
                       Sujet *
                     </label>
                     <select
@@ -256,7 +256,7 @@ export default function ContactPage() {
                       value={formData.subject}
                       onChange={handleInputChange}
                       required
-                      className="w-full h-12 px-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full h-12 px-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent bg-card text-foreground"
                     >
                       <option value="location">Location saisonnière</option>
                       <option value="vente">Vente immobilière</option>
@@ -269,7 +269,7 @@ export default function ContactPage() {
 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                   <div>
-                    <label htmlFor="location" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="location" className="block text-sm font-medium text-foreground mb-2">
                       Localisation souhaitée
                     </label>
                     <Input
@@ -283,7 +283,7 @@ export default function ContactPage() {
                     />
                   </div>
                   <div>
-                    <label htmlFor="budget" className="block text-sm font-medium text-gray-700 mb-2">
+                    <label htmlFor="budget" className="block text-sm font-medium text-foreground mb-2">
                       Budget approximatif
                     </label>
                     <Input
@@ -299,7 +299,7 @@ export default function ContactPage() {
                 </div>
 
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
                     Message *
                   </label>
                   <textarea
@@ -309,7 +309,7 @@ export default function ContactPage() {
                     onChange={handleInputChange}
                     required
                     rows={6}
-                    className="w-full px-3 py-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent resize-none"
+                    className="w-full px-3 py-3 border border-border rounded-md focus:outline-none focus:ring-2 focus:ring-ring focus:border-transparent resize-none bg-card text-foreground"
                     placeholder="Décrivez votre projet, vos besoins, vos questions..."
                   />
                 </div>
@@ -318,7 +318,7 @@ export default function ContactPage() {
                   <Button
                     type="submit"
                     disabled={isSubmitting}
-                    className="flex-1 bg-blue-600 hover:bg-blue-700 text-white px-8 py-4 h-auto rounded-xl font-semibold text-base shadow-lg"
+                    className="flex-1 mahalli-bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 h-auto rounded-xl font-semibold text-base shadow-lg"
                   >
                     {isSubmitting ? (
                       <>
@@ -334,7 +334,7 @@ export default function ContactPage() {
                   </Button>
                   <a
                     href="tel:+21642614477"
-                    className="flex-1 inline-flex items-center justify-center bg-green-600 hover:bg-green-700 text-white px-8 py-4 rounded-xl font-semibold text-base shadow-lg transition-colors"
+                    className="flex-1 inline-flex items-center justify-center bg-success hover:bg-success/90 text-success-foreground px-8 py-4 rounded-xl font-semibold text-base shadow-lg transition-colors"
                   >
                     <Phone className="h-5 w-5 mr-2" />
                     Appel direct
@@ -343,16 +343,16 @@ export default function ContactPage() {
               </form>
             ) : (
               <div className="text-center py-12">
-                <div className="w-20 h-20 bg-green-100 text-green-600 rounded-full flex items-center justify-center mx-auto mb-6">
+                <div className="w-20 h-20 bg-success/10 text-success rounded-full flex items-center justify-center mx-auto mb-6">
                   <CheckCircle className="h-10 w-10" />
                 </div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl font-bold text-foreground mb-4">
                   Message envoyé avec succès !
                 </h3>
-                <p className="text-lg text-gray-600 mb-6">
+                <p className="text-lg text-muted-foreground mb-6">
                   Merci pour votre message. Notre équipe vous contactera dans les plus brefs délais.
                 </p>
-                <div className="text-sm text-blue-600">
+                <div className="text-sm text-primary">
                   Vous pouvez aussi nous appeler directement : 42 614 477
                 </div>
               </div>
@@ -365,22 +365,22 @@ export default function ContactPage() {
       <section className="py-16 lg:py-24">
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
               Questions Fréquentes
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-muted-foreground">
               Trouvez rapidement les réponses aux questions les plus courantes
             </p>
           </div>
 
           <div className="space-y-6">
             {faqItems.map((faq, index) => (
-              <div key={index} className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100">
-                <h3 className="text-xl font-bold text-gray-900 mb-4 flex items-center">
-                  <AlertCircle className="h-6 w-6 text-blue-600 mr-3" />
+              <div key={index} className="bg-card rounded-2xl p-8 card-shadow border border-border">
+                <h3 className="text-xl font-bold text-foreground mb-4 flex items-center">
+                  <AlertCircle className="h-6 w-6 text-primary mr-3" />
                   {faq.question}
                 </h3>
-                <p className="text-gray-600 leading-relaxed pl-9">
+                <p className="text-muted-foreground leading-relaxed pl-9">
                   {faq.answer}
                 </p>
               </div>
@@ -390,25 +390,25 @@ export default function ContactPage() {
       </section>
 
       {/* Map Section */}
-      <section className="py-16 lg:py-24 bg-gray-50">
+      <section className="py-16 lg:py-24 bg-muted/30">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
+            <h2 className="text-3xl lg:text-4xl font-bold text-foreground mb-4">
               Notre Localisation
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className="text-lg text-muted-foreground">
               Venez nous rendre visite à Ben Arous
             </p>
           </div>
           
-          <div className="bg-white rounded-2xl p-8 shadow-xl">
-            <div className="aspect-w-16 aspect-h-9 h-96 bg-gray-200 rounded-xl flex items-center justify-center">
+          <div className="bg-card rounded-2xl p-8 card-shadow border border-border">
+            <div className="aspect-w-16 aspect-h-9 h-96 bg-muted rounded-xl flex items-center justify-center">
               <div className="text-center">
-                <MapPin className="h-12 w-12 text-gray-400 mx-auto mb-4" />
-                <p className="text-gray-600">
+                <MapPin className="h-12 w-12 text-muted-foreground mx-auto mb-4" />
+                <p className="text-muted-foreground">
                   Carte interactive - Ben Arous, Tunisie
                 </p>
-                <p className="text-sm text-gray-500 mt-2">
+                <p className="text-sm text-muted-foreground/70 mt-2">
                   Intégration Google Maps à venir
                 </p>
               </div>
