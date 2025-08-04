@@ -224,14 +224,14 @@ const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 mt-6 lg:mt-8">
               <Button 
                 onClick={handleSearch}
-                className="flex-1 sm:flex-none mahalli-bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-3 h-12 rounded-lg font-medium text-base transition-colors duration-200 shadow-lg hover:shadow-xl"
+                className="flex-1 sm:flex-none mahalli-bg-primary hover:bg-primary/90 text-primary-foreground px-8 py-4 h-14 rounded-xl font-semibold text-base transition-all duration-200 shadow-lg hover:shadow-xl hover:scale-105"
               >
                 <Search className="h-5 w-5 mr-2" />
                 Rechercher
               </Button>
               <Button 
                 variant="outline"
-                className="flex-1 sm:flex-none border-border hover:bg-muted/50 px-8 py-3 h-12 rounded-lg font-medium text-base transition-colors duration-200"
+                className="flex-1 sm:flex-none border-2 border-primary/30 hover:bg-primary/10 hover:border-primary/50 px-8 py-4 h-14 rounded-xl font-semibold text-base transition-all duration-200 bg-white/80 backdrop-blur-sm"
               >
                 Recherche Avancée
               </Button>
